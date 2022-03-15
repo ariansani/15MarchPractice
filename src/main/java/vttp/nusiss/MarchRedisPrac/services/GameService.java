@@ -14,7 +14,7 @@ public class GameService {
     private GameRepository gameRepo;
 
     public Set<String> searchKeys(String index){
-        String pattern="*%s".formatted(index);
+        String pattern="*%s*".formatted(index);
         return gameRepo.getKeys(pattern);
     }
 
